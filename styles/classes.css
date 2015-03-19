@@ -1,0 +1,15 @@
+[aria-hidden="true"] {
+  display: none;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.hide-text {
+  text-indent: 300%;
+  white-space: nowrap;
+  overflow: hidden;
+}

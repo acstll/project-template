@@ -1,0 +1,40 @@
+:root {
+  --unit: 1rem;
+
+  --base: 1em;
+  
+  --line-height: 1.4;
+}
+
+@custom-media --full (min-width: 55.000em); /* 880px */
+@custom-media --no-full (max-width: 55.000em); /* 880px */
+
+/* hint: @media (--full) {*/
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  font-size: var(--base);
+  line-height: 1;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  overflow: auto;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: 1em;
+}
