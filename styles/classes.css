@@ -1,7 +1,3 @@
-[aria-hidden="true"] {
-  display: none;
-}
-
 .group:after {
   content: "";
   display: table;
