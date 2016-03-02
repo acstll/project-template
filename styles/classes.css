@@ -4,7 +4,7 @@
   clear: both;
 }
 
-.hide-text {
+.hideText {
   text-indent: 300%;
   white-space: nowrap;
   overflow: hidden;

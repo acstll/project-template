@@ -1,20 +1,18 @@
 :root {
   --unit: 1rem;
-
-  --base: 1em;
-
-  --line-height: 1.4;
+  --font-family: sans-serif;
+  --line-height: 1.2;
 }
 
-@custom-media --full (min-width: 55.000em); /* 880px */
-@custom-media --no-full (max-width: 55.000em); /* 880px */
+@custom-media --full (min-width: 50.000em); /* 800px */
+@custom-media --no-full (max-width: 50.000em); /* 800px */
 
 /* hint: @media (--full) {*/
 
 html {
   height: 100%;
   box-sizing: border-box;
-  font-size: var(--base);
+  font-size: 1em;
   line-height: 1;
 }
 
@@ -25,8 +23,9 @@ html {
 }
 
 body {
+  font-family: var(--font-family);
   overflow: auto;
-  height: auto;
+  height: 100%;
 }
 
 h1,
@@ -37,4 +36,11 @@ h5,
 h6 {
   font-weight: normal;
   font-size: 1em;
+}
+
+p,
+ul,
+ol,
+blockquote {
+  line-height: var(--line-height);
 }
