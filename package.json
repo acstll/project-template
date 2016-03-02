@@ -2,23 +2,26 @@
   "name": "project-www",
   "version": "1.0.0",
   "private": true,
-  "config": {
-    "preamble": "/*! arturu.com */"
-  },
   "scripts": {
-    "myth": "myth ./styles/main.css > OUTPUT",
-    "myth:watch": "watch 'npm run myth' ./styles",
+    "css": "postcss -u postcss-import -u postcss-url -u autoprefixer -u postcss-cssnext -o OUTPUT ./styles/main.css",
+    "css:watch": "watch 'npm run css' ./styles",
     "bf": "browserify ./scripts/main.js > OUTPUT",
     "wf": "watchify ./scripts/main.js -o OUTPUT",
-    "uglify": "uglifyjs INPUT -mc --preamble $npm_package_config_preamble -o OUTPUT",
-    "disc": "browserify ./scripts/main.js --full-paths | discify --open"
+    "uglify": "uglifyjs INPUT -mc --preamble '/*! :·) */' -o OUTPUT",
+    "disc": "browserify ./scripts/main.js --full-paths | discify --open",
+    "lint": "standard scripts/*"
   },
   "devDependencies": {
-    "browserify": "^10.2.4",
+    "browserify": "^13.0.0",
     "disc": "^1.3.2",
-    "myth": "^1.4.0",
+    "postcss": "^5.0.18",
+    "postcss-cli": "^2.5.1",
+    "postcss-cssnext": "^2.4.0",
+    "postcss-import": "^8.0.2",
+    "postcss-url": "^5.1.1",
+    "standard": "^6.0.7",
     "uglifyjs": "^2.4.10",
-    "watch": "^0.16.0",
-    "watchify": "^3.2.3"
+    "watch": "^0.17.0",
+    "watchify": "^3.7.0"
   }
 }
