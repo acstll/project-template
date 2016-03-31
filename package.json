@@ -22,5 +22,8 @@
     "uglifyjs": "^2.4.10",
     "watch": "^0.17.0",
     "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "normalize.css": "^3.0.3"
   }
 }
