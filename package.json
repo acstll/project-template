@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "css": "postcss -u postcss-import -u postcss-url -u autoprefixer -u postcss-cssnext -o OUTPUT ./styles/main.css",
+    "css": "postcss -u postcss-import -u postcss-cssnext -o OUTPUT ./styles/main.css",
     "css:watch": "watch 'npm run css' ./styles",
     "bf": "browserify ./scripts/main.js > OUTPUT",
     "wf": "watchify ./scripts/main.js -o OUTPUT",
@@ -18,7 +18,6 @@
     "postcss-cli": "^2.5.1",
     "postcss-cssnext": "^2.4.0",
     "postcss-import": "^8.0.2",
-    "postcss-url": "^5.1.1",
     "standard": "^6.0.7",
     "uglifyjs": "^2.4.10",
     "watch": "^0.17.0",
