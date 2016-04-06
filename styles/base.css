@@ -4,10 +4,10 @@
   --line-height: 1.2;
 }
 
-@custom-media --full (min-width: 50.000em); /* 800px */
-@custom-media --no-full (max-width: 50.000em); /* 800px */
+@custom-media --breakpoint-1 (min-width: 50.000em); /* 800px */
+@custom-media --breakpoint-1- (max-width: 50.000em); /* 800px */
 
-/* hint: @media (--full) {*/
+/* hint: @media (--breakpoint-1) {*/
 
 html {
   height: 100%;
