@@ -3,9 +3,3 @@
   display: table;
   clear: both;
 }
-
-.hideText {
-  text-indent: 300%;
-  white-space: nowrap;
-  overflow: hidden;
-}
