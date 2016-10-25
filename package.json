@@ -13,7 +13,7 @@
     "lint": "standard scripts/*"
   },
   "devDependencies": {
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.16.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
     "babel-preset-es2040": "^1.1.1",
     "babelify": "^7.3.0",
     "browserify": "^13.1.0",
