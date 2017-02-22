@@ -12,6 +12,10 @@
     "disc": "NODE_ENV=production browserify -t babelify ./scripts/main.js --full-paths | discify --open",
     "lint": "standard 'scripts/**/*.js'"
   },
+  "babel": {
+    "presets": ["es2040"],
+    "plugins": ["transform-es2015-modules-commonjs"]
+  },
   "devDependencies": {
     "babel-plugin-transform-es2015-modules-commonjs": "latest",
     "babel-preset-es2040": "latest",
