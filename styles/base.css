@@ -1,11 +1,12 @@
+
 :root {
   --unit: 1rem;
   --font-family: sans-serif;
   --line-height: 1.2;
 }
 
-@custom-media --breakpoint-1 (min-width: 48.000em); /* 768px */
-@custom-media --breakpoint-1- (max-width: 47.999em);
+@custom-media --sm (min-width: 32.000em); /* 512px */
+@custom-media --md (min-width: 48.000em); /* 768px */
 
 html {
   height: 100%;
@@ -24,6 +25,7 @@ body {
   height: 100%;
   overflow: auto;
   font-family: var(--font-family);
+  margin: 0;
 }
 
 h1,

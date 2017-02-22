@@ -28,7 +28,5 @@
     "watch": "latest",
     "watchify": "latest"
   },
-  "dependencies": {
-    "normalize.css": "latest"
-  }
+  "dependencies": {}
 }
