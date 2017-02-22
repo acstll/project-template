@@ -5,10 +5,10 @@
   "scripts": {
     "css": "postcss -u postcss-import -u postcss-cssnext -o OUTPUT ./styles/main.css",
     "css:watch": "watch 'npm run css' ./styles",
-    "css:nano": "postcss -u postcss-import -u postcss-cssnext -u cssnano -o OUTPUT ./styles/main.css",
-    "bf": "browserify -t babelify ./scripts/main.js > OUTPUT",
-    "wf": "watchify ./scripts/main.js -t babelify -v -o OUTPUT",
-    "uglify": "uglifyjs INPUT -mc --preamble '/*! :·) */' -o OUTPUT",
+    "css:min": "postcss -u postcss-import -u postcss-cssnext -u cssnano -o OUTPUT ./styles/main.css",
+    "js": "NODE_ENV=production browserify -t babelify ./scripts/main.js > OUTPUT",
+    "js:watch": "watchify ./scripts/main.js -t babelify -v -o OUTPUT",
+    "js:min": "uglifyjs INPUT -mc --preamble '/*! :·) */' -o OUTPUT",
     "disc": "browserify -t babelify ./scripts/main.js --full-paths | discify --open",
     "lint": "standard 'scripts/**/*.js'"
   },
