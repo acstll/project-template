@@ -9,7 +9,7 @@
     "js": "NODE_ENV=production browserify -t babelify ./scripts/main.js > OUTPUT",
     "js:watch": "watchify ./scripts/main.js -t babelify -v -o OUTPUT",
     "js:min": "uglifyjs INPUT -mc --preamble '/*! :·) */' -o OUTPUT",
-    "disc": "browserify -t babelify ./scripts/main.js --full-paths | discify --open",
+    "disc": "NODE_ENV=production browserify -t babelify ./scripts/main.js --full-paths | discify --open",
     "lint": "standard 'scripts/**/*.js'"
   },
   "devDependencies": {
