@@ -3,34 +3,37 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "css": "postcss -u postcss-import -u postcss-cssnext -o OUTPUT ./styles/main.css",
-    "css:watch": "watch 'npm run css' ./styles",
-    "css:min": "postcss -u postcss-import -u postcss-cssnext -u cssnano -o OUTPUT ./styles/main.css",
-    "js": "NODE_ENV=production browserify -t babelify ./scripts/main.js > OUTPUT",
-    "js:watch": "watchify ./scripts/main.js -t babelify -v -o OUTPUT",
-    "js:min": "uglifyjs INPUT -mc --preamble '/*! :·) */' -o OUTPUT",
-    "disc": "NODE_ENV=production browserify -t babelify ./scripts/main.js --full-paths | discify --open",
-    "lint": "standard 'scripts/**/*.js'"
+    "css": "postcss ./styles/main.css -u postcss-import -u postcss-cssnext -u postcss-object-fit-images -o CSS_OUTPUT",
+    "css:watch": "postcss ./styles/main.css -u postcss-import -u postcss-cssnext -u postcss-object-fit-images -o CSS_OUTPUT -w",
+    "css:min": "postcss ./styles/main.css -u postcss-import -u postcss-cssnext -u postcss-object-fit-images | cleancss --skip-rebase -o CSS_OUTPUT",
+    "js": "NODE_ENV=production rollup -c",
+    "js:watch": "rollup -c -w",
+    "js:min": "uglifyjs JS_INPUT -mc --preamble '/*! :·) */' -o JS_MIN_OUTPUT",
+    "lint": "standard 'scripts/**/*.js' | snazzy"
   },
   "babel": {
-    "presets": ["es2040"],
-    "plugins": ["transform-es2015-modules-commonjs"]
+    "presets": [
+      "es2040"
+    ],
+    "plugins": [
+      "external-helpers"
+    ]
   },
   "devDependencies": {
-    "babel-plugin-transform-es2015-modules-commonjs": "latest",
+    "babel-plugin-external-helpers": "latest",
     "babel-preset-es2040": "latest",
-    "babelify": "latest",
-    "browserify": "latest",
-    "cssnano": "latest",
-    "disc": "latest",
-    "postcss": "latest",
+    "clean-css-cli": "latest",
     "postcss-cli": "latest",
     "postcss-cssnext": "latest",
     "postcss-import": "latest",
+    "postcss-object-fit-images": "latest",
+    "rollup": "latest",
+    "rollup-plugin-babel": "latest",
+    "rollup-plugin-commonjs": "latest",
+    "rollup-plugin-node-resolve": "latest",
+    "rollup-watch": "latest",
+    "snazzy": "latest",
     "standard": "latest",
-    "uglifyjs": "latest",
-    "watch": "latest",
-    "watchify": "latest"
-  },
-  "dependencies": {}
+    "uglifyjs": "latest"
+  }
 }

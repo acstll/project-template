@@ -1,19 +1,22 @@
 
 :root {
-  --unit: 1rem;
-  --font-family: sans-serif;
-  --line-height: 1.2;
-}
-
-@custom-media --sm (min-width: 32.000em); /* 512px */
-@custom-media --md (min-width: 48.000em); /* 768px */
-
-html {
-  height: 100%;
-  box-sizing: border-box;
   font-size: 1em;
+  font-family: sans-serif;
   line-height: 1;
+  box-sizing: border-box;
+
+  --line-height: 1.2;
+
+  --group: {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
+
+@custom-media --sm (min-width: 32em); /* 512 */
+@custom-media --md (min-width: 48em); /* 768 */
+@custom-media --lg (min-width: 64em); /* 1024 */
 
 *,
 *:before,
@@ -22,9 +25,6 @@ html {
 }
 
 body {
-  height: 100%;
-  overflow: auto;
-  font-family: var(--font-family);
   margin: 0;
 }
 
