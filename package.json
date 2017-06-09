@@ -8,7 +8,7 @@
     "css:min": "postcss ./styles/main.css -u postcss-import -u postcss-cssnext -u postcss-object-fit-images | cleancss --skip-rebase -o CSS_OUTPUT",
     "js": "NODE_ENV=production rollup -c",
     "js:watch": "rollup -c -w",
-    "js:min": "uglifyjs JS_INPUT -mc --preamble '/*! :·) */' -o JS_MIN_OUTPUT",
+    "js:min": "squash JS_INPUT --check > JS_MIN_OUTPUT",
     "lint": "standard 'scripts/**/*.js' | snazzy"
   },
   "babel": {
@@ -22,6 +22,7 @@
   "devDependencies": {
     "babel-plugin-external-helpers": "latest",
     "babel-preset-es2040": "latest",
+    "butternut": "latest",
     "clean-css-cli": "latest",
     "postcss-cli": "latest",
     "postcss-cssnext": "latest",
@@ -33,7 +34,6 @@
     "rollup-plugin-node-resolve": "latest",
     "rollup-watch": "latest",
     "snazzy": "latest",
-    "standard": "latest",
-    "uglifyjs": "latest"
+    "standard": "latest"
   }
 }
